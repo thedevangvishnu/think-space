@@ -11,12 +11,14 @@ export const Heroes = () => {
             alt="Hero"
             fill
             className="object-contain dark:hidden"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
           <Image
             src="/images/employer-dark.png"
             alt="Hero"
             fill
             className="object-contain hidden dark:block"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
         <div className="hidden md:block relative h-[400px] w-[400px]">
@@ -25,12 +27,14 @@ export const Heroes = () => {
             alt="Manager"
             fill
             className="object-contain dark:hidden"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
           <Image
             src="/images/manager-dark.png"
             alt="Manager"
             fill
             className="object-contain hidden dark:block"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
       </div>
