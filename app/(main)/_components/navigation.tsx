@@ -16,9 +16,9 @@ import { useMutation, useQuery } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { Item } from "./item";
 import { toast } from "sonner";
+import { DocumentList } from "./document-list";
 
 export const Navigation = () => {
-  const documents = useQuery(api.documents.getAll);
   const create = useMutation(api.documents.create);
 
   const pathname = usePathname();
@@ -151,9 +151,7 @@ export const Navigation = () => {
         </div>
 
         <div className="mt-4">
-          {documents?.map((document) => (
-            <p key={document._id}>{document.title}</p>
-          ))}
+          <DocumentList />
         </div>
 
         <div
