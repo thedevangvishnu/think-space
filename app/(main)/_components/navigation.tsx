@@ -24,6 +24,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import { TrashBox } from "./trashbox";
 
 export const Navigation = () => {
   const create = useMutation(api.documents.create);
@@ -166,9 +167,9 @@ export const Navigation = () => {
             </PopoverTrigger>
             <PopoverContent
               side={isMobile ? "bottom" : "right"}
-              className="p-0 w-72"
+              className="p-0 w-72 dark:bg-[#111111]"
             >
-              <p>Trash box</p>
+              <TrashBox />
             </PopoverContent>
           </Popover>
         </div>
