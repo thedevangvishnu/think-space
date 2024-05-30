@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 import { FileIcon } from "lucide-react";
 
 interface DocumentListProps {
-  parentDocumentId: Id<"documents">;
+  parentDocumentId?: Id<"documents">;
   level?: number;
   data?: Doc<"documents">;
 }
@@ -60,8 +60,7 @@ export const DocumentList = ({
         style={{ paddingLeft: level ? `${level * 12 + 25}px` : "undefined" }}
         className={cn(
           "hidden text-sm font-medium text-muted-foreground/80",
-          expanded && "last:block",
-          level === 0 && "hidden"
+          expanded && "last:block"
         )}
       >
         No pages inside
