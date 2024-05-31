@@ -26,6 +26,7 @@ import {
 } from "@/components/ui/popover";
 import { TrashBox } from "./trashbox";
 import { useSearch } from "@/hooks/use-search";
+import { useSettings } from "@/hooks/useSettings";
 
 export const Navigation = () => {
   const create = useMutation(api.documents.create);
@@ -42,6 +43,7 @@ export const Navigation = () => {
   const [isCollapsed, setIsCollapsed] = useState(isMobile);
 
   const onOpen = useSearch((store) => store.onOpen);
+  const settings = useSettings();
 
   useEffect(() => {
     if (isMobile) {
@@ -153,11 +155,11 @@ export const Navigation = () => {
           <ChevronsLeft />
         </div>
 
-        {/* user item */}
+        {/* settigns, search, new button */}
         <div>
           <UserItem />
           <Item label="Search" icon={Search} isSearch onClick={onOpen} />
-          <Item label="Settings" icon={Settings} onClick={() => {}} />
+          <Item label="Settings" icon={Settings} onClick={settings.onOpen} />
           <Item onClick={handleCreate} label="New page" icon={PlusCircle} />
         </div>
 
