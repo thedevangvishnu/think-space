@@ -8,6 +8,7 @@ import { ImageIcon, Smile, X } from "lucide-react";
 import { useMutation } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import TextAreaAutosize from "react-textarea-autosize";
+import { useCoverImage } from "@/hooks/use-cover-image";
 
 interface ToolbarProps {
   initialData: Doc<"documents">;
@@ -21,6 +22,8 @@ export const Toolbar = ({ initialData, preview }: ToolbarProps) => {
 
   const update = useMutation(api.documents.update);
   const removeIcon = useMutation(api.documents.removeIcon);
+
+  const coverImage = useCoverImage();
 
   const enableInput = () => {
     if (preview) return;
@@ -66,6 +69,7 @@ export const Toolbar = ({ initialData, preview }: ToolbarProps) => {
 
   return (
     <div className="pl-[54px] group ">
+      {/* icon */}
       {!!initialData.icon && !preview && (
         <div className="flex items-center gap-x-2 group/icon pt-6">
           <IconPicker onChange={onIconSelect}>
@@ -86,6 +90,8 @@ export const Toolbar = ({ initialData, preview }: ToolbarProps) => {
       {!!initialData.icon && preview && (
         <p className="text-6xl pt-6">{initialData.icon}</p>
       )}
+
+      {/* when no icon and cover image in document */}
       <div className="opacity-0 group-hover:opacity-100 flex items-center gap-x-1 py-4">
         {!initialData.icon && !preview && (
           <IconPicker asChild onChange={onIconSelect}>
@@ -99,11 +105,11 @@ export const Toolbar = ({ initialData, preview }: ToolbarProps) => {
             </Button>
           </IconPicker>
         )}
-        {!initialData.coverIamge && !preview && (
+        {!initialData.coverImage && !preview && (
           <Button
             variant="outline"
             size="sm"
-            onClick={() => {}}
+            onClick={coverImage.onOpen}
             className="text-xs text-muted-foreground"
           >
             <ImageIcon className="h-4 w-4 mr-2" />
@@ -111,6 +117,8 @@ export const Toolbar = ({ initialData, preview }: ToolbarProps) => {
           </Button>
         )}
       </div>
+
+      {/* title */}
       {isEditing && !preview ? (
         <TextAreaAutosize
           ref={inputRef}

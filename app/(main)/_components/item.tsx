@@ -74,7 +74,7 @@ export const Item = ({
       if (!expanded) {
         onExpand?.();
       }
-      //   router.push(`/documents/${documentId}`);
+      router.push(`/documents/${documentId}`);
     });
 
     toast.promise(promise, {
@@ -111,7 +111,23 @@ export const Item = ({
     >
       <div className="w-8">
         {documentIcon ? (
-          <div className="shrink-0 text-[18px] mr-2">{documentIcon}</div>
+          <>
+            <div
+              className={cn(
+                "shrink-0 h-[18px] mr-2",
+                !!id && "group-hover:hidden"
+              )}
+            >
+              {documentIcon}
+            </div>
+            <div
+              onClick={handleExpand}
+              role="button"
+              className="hidden h-full w-5 rounded-sm hover:bg-neutral-300 dark:hover:bg-neutral-600 transition-colors duration-150 mr-1 group-hover:flex"
+            >
+              <ChevronIcon className="h-5 w-5 shrink-0 text-muted-foreground/50" />
+            </div>
+          </>
         ) : (
           <>
             <Icon
