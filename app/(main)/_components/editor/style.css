@@ -1,0 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+.bn-container[data-changing-font-demo] .bn-editor * {
+  font-family: "Inter", sans-serif;
+}
