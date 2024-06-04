@@ -114,7 +114,7 @@ export const Item = ({
           <>
             <div
               className={cn(
-                "shrink-0 h-[18px] mr-2",
+                "shrink-0 h-[18px] w-[18px] mr-2",
                 !!id && "group-hover:hidden"
               )}
             >
@@ -132,7 +132,7 @@ export const Item = ({
           <>
             <Icon
               className={cn(
-                "shrink-0 h-[18px] mr-2",
+                "shrink-0 h-[18px] w-[18px] mr-2",
                 !!id && "group-hover:hidden"
               )}
             />
