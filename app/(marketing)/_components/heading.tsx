@@ -18,7 +18,7 @@ export const Heading = () => {
         <span className="underline">Think Space</span>
       </h1>
       <h3 className="text-base sm:text-xl md:text-2xl font-medium md:w-[60%] md:text-center">
-        Jotion is the connected workspace where better, faster work happens.
+        Think Space is the connected workspace where better, faster work happens.
       </h3>
       <div className="h-12 flex items-center justify-center">
         {isLoading && <Spinner />}
