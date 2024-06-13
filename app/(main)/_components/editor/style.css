@@ -3,3 +3,9 @@
 .bn-container[data-changing-font-demo] .bn-editor * {
   font-family: "Inter", sans-serif;
 }
+
+.bn-container[data-theming-css-variables-demo][data-color-scheme="dark"] {
+  --bn-colors-editor-text: #ffffff;
+  --bn-colors-editor-background: #120f24;
+  --bn-colors-side-menu: #ffffff;
+}

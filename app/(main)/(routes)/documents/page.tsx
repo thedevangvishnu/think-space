@@ -49,7 +49,7 @@ const DocumentsPage = () => {
       <h2 className="text-lg font-medium">
         Welcome to {user?.firstName}&apos;s Think Space
       </h2>
-      <Button onClick={handleClick}>
+      <Button onClick={handleClick} className="">
         <PlusCircle className="h-4 w-4 mr-2" />
         Create a note
       </Button>
