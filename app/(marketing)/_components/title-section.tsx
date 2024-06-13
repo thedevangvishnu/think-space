@@ -13,7 +13,7 @@ export const TitleSection = ({
 }: TitleSectionProps) => {
   return (
     <React.Fragment>
-      <section className="flex flex-col gap-6 justify-center items-start md:items-center">
+      <div className="flex flex-col gap-6 justify-center items-start md:items-center">
         <article className="rounded-full p-[1px] text-sm bg-primary-purple-100/50">
           <div className="rounded-full text-sm md:text-base px-3 py-1 bg-home-bg text-home-text">
             ✨ {pill}
@@ -25,7 +25,7 @@ export const TitleSection = ({
             <h2 className="text-left text-3xl sm:text-5xl sm:max-w-[750px] md:text-center font-semibold">
               {title}
             </h2>
-            <p className="text-washed-purple-700 sm:max-w-[450px]">
+            <p className="text-washed-purple-700 sm:max-w-[450px] md:text-center">
               {subheading}
             </p>
           </>
@@ -34,7 +34,7 @@ export const TitleSection = ({
             {title}
           </h1>
         )}
-      </section>
+      </div>
     </React.Fragment>
   );
 };
