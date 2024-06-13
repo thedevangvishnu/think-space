@@ -4,13 +4,10 @@ import { useScrollTop } from "@/hooks/use-scroll-top";
 import { cn } from "@/lib/utils";
 import React from "react";
 import { Logo } from "./logo";
-import { ModeToggle } from "@/components/mode-toggle";
 import { useConvexAuth } from "convex/react";
 import { SignInButton, UserButton } from "@clerk/clerk-react";
 import { Button } from "@/components/ui/button";
 import { Spinner } from "@/components/spinner";
-import { ArrowRight } from "lucide-react";
-import Link from "next/link";
 
 export const Navbar = () => {
   const scrolled = useScrollTop();
@@ -26,7 +23,7 @@ export const Navbar = () => {
     >
       <nav className="w-full h-full flex items-center justify-between relative max-w-[1300px] mx-auto">
         <Logo />
-        <div className="flex items-center">
+        <div className="flex items-center gap-x-4">
           {isLoading && <Spinner />}
           {!isLoading && !isAuthenticated && (
             <SignInButton mode="modal">
@@ -42,15 +39,7 @@ export const Navbar = () => {
             </SignInButton>
           )}
 
-          {!isLoading && isAuthenticated && (
-            <>
-              <Button variant="ghost" size="sm" asChild>
-                <Link href="/documents">Enter TS</Link>
-              </Button>
-              <UserButton afterSignOutUrl="/" />
-            </>
-          )}
-          {/* <ModeToggle /> */}
+          {!isLoading && isAuthenticated && <UserButton afterSignOutUrl="/" />}
         </div>
       </nav>
     </header>

@@ -1,6 +1,3 @@
-import { Heading } from "./_components/heading";
-import { Heroes } from "./_components/heroes";
-import { Footer } from "./_components/footer";
 import { TitleSection } from "./_components/title-section";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -8,18 +5,7 @@ import { CLIENTS, USERS } from "@/lib/constants";
 import { randomUUID } from "crypto";
 import { cn } from "@/lib/utils";
 import { TestimonialCard } from "./_components/testimonial-card";
-
-// export default function Home() {
-//   return (
-//     <div className="min-h-full flex flex-col">
-//       <div className="flex flex-col items-center justify-center md:justify-start text-center gap-y-8 flex-1 px-6 pb-10">
-//         <Heading />
-//         <Heroes />
-//         <Footer />
-//       </div>
-//     </div>
-//   );
-// }
+import { Auth } from "./_components/auth";
 
 export default function Home() {
   return (
@@ -31,14 +17,9 @@ export default function Home() {
           title="
           All-In-One Tool for Your Ideas, Documents And Plans."
         />
-        <div className="w-fit bg-foreground p-[2px] mt-4 rounded-full bg-gradient-to-r from-primary to-washed-blue-200 z-20">
-          <Button
-            variant="secondary"
-            className=" text-home-text rounded-full p-6 text-base md:text-lg bg-home-bg hover:bg-home-bg hover:text-white transition-colors duration-200"
-          >
-            Get Think Space Free
-          </Button>
-        </div>
+
+        <Auth />
+
         <div className="md:mt-[-90px] sm:w-full w-[750px] flex justify-center items-center mt-[-40px] relative sm:ml-0 ml-[-50px] h-[400px] md:h-[600px] z-10">
           <Image
             src="/images/appBanner.png"
