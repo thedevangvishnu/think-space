@@ -1,3 +1,4 @@
+import { Footer } from "./_components/footer";
 import { Navbar } from "./_components/navbar";
 
 // const MarketingLayout = ({ children }: { children: React.ReactNode }) => {
@@ -12,8 +13,9 @@ import { Navbar } from "./_components/navbar";
 const MarketingLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
-      {/* <MarketingNavbar /> */}
-      <main className="bg-home-bg text-home-text">{children}</main>
+      <Navbar />
+      <main className="bg-home-bg text-home-text pt-36">{children}</main>
+      <Footer />
     </>
   );
 };

@@ -93,7 +93,7 @@ export default function Home() {
       </section>
 
       {/* testimonails section */}
-      <section className="mt-20 px-6 sm:px-8 flex justify-center items-center flex-col relative">
+      <section className="mt-20 px-6 sm:px-8 flex justify-center items-center flex-col relative pb-40">
         <div className="w-[70%] md:w-[40%] blur-[120px] rounded-full h-48 md:h-[300px] absolute bg-brand-primaryPurple/80 md:bg-brand-primaryPurple/50 top-[20%]" />
         <div className="z-10 flex flex-col w-full overflow-hidden">
           <TitleSection
@@ -135,6 +135,18 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* testimonails section
+      <section className="mt-20 px-6 sm:px-8 flex justify-center items-center flex-col relative">
+        <div className="w-[70%] md:w-[40%] blur-[120px] rounded-full h-48 md:h-[300px] absolute bg-brand-primaryPurple/80 md:bg-brand-primaryPurple/40 top-[20%]" />
+        <div className="z-10 flex flex-col w-full overflow-hidden">
+          <TitleSection
+            title="The Perfect Plan For You"
+            subheading="Experience all the benefits of our platform. Select a plan that suits your needs and take your productivity to new heights."
+            pill="Pricing"
+          />
+        </div>
+      </section> */}
     </>
   );
 }
