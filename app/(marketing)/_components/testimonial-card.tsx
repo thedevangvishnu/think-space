@@ -23,7 +23,7 @@ export const TestimonialCard = ({
   src,
 }: TestimonialCardProps) => {
   return (
-    <Card className="w-[300px] md:w-[450px] bg-gradient-to-b from-brand-primaryPurple/20 to-brand-primaryPurple/50 border-washed-purple-800 relative">
+    <Card className="w-[300px] md:w-[450px] bg-gradient-to-b from-brand-primaryPurple/10 to-brand-primaryPurple/40 border-washed-purple-800 relative text-home-text">
       <CardHeader className="flex flex-row items-start gap-x-4 relative space-y-0">
         <Avatar className="w-[40px] h-[40px]">
           <AvatarImage src={src} />

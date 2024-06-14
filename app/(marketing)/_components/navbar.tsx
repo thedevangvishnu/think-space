@@ -17,8 +17,8 @@ export const Navbar = () => {
   return (
     <header
       className={cn(
-        "z-50 bg-background top-0 fixed w-full px-6 py-4 md:py-5 transition-all duration-200",
-        scrolled && "border-b shadow-md"
+        "z-50 bg-home-bg top-0 fixed w-full px-6 py-4 md:py-5 transition-all duration-200 text-home-text",
+        scrolled && "border-b-black shadow-md"
       )}
     >
       <nav className="w-full h-full flex items-center justify-between relative max-w-[1300px] mx-auto">
