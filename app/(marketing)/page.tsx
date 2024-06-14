@@ -11,21 +11,25 @@ export default function Home() {
   return (
     <>
       {/* hero section */}
-      <section className="overflow-hidden px-6 sm:px-8 pt-10 sm:flex sm:flex-col gap-4 md:justify-center md:items-center">
+      <section className="overflow-hidden px-6 sm:px-8 md:pt-10 sm:flex sm:flex-col gap-4 md:justify-center md:items-center">
         <TitleSection
           pill="Your workspace, perfected!"
           title="
           All-In-One Tool for Your Ideas, Documents And Plans."
         />
 
-        <Auth />
+        <div className="z-10 relative">
+          <Auth />
+        </div>
 
-        <div className="md:mt-[-90px] sm:w-full w-[750px] flex justify-center items-center mt-[-40px] relative sm:ml-0 ml-[-50px] h-[400px] md:h-[600px] z-10">
+        <div className="w-[70%] md:w-[60%] blur-[120px] rounded-full h-[300px] absolute bg-brand-primaryPurple/80 top-[50%] md:top-[65%]" />
+
+        <div className="sm:w-full w-[750px] flex justify-center items-center relative sm:ml-10 md:ml-0  h-[400px] md:h-[600px] z-10 mt-10 rounded-xl">
           <Image
-            src="/images/appBanner.png"
+            src="/images/app-banner.png"
             alt="Application Banner"
             fill
-            className="object-contain"
+            className="object-contain rounded-lg"
           />
           <div className="bottom-0 top-[50%] bg-gradient-to-t from-home-bg left-0 right-0 absolute z-10"></div>
         </div>

@@ -12,7 +12,7 @@ export const Auth = () => {
 
   if (isLoading) {
     return (
-      <div className="h-20 flex items-center justify-center">
+      <div className="flex items-center mt-4 justify-center w-fit p-[2px] h-14">
         <Spinner size="lg" />
       </div>
     );
@@ -24,7 +24,7 @@ export const Auth = () => {
         <div className="w-fit bg-foreground p-[2px] mt-4 rounded-full bg-gradient-to-r from-primary to-washed-blue-200 z-20">
           <Button
             variant="secondary"
-            className=" text-home-text rounded-full p-6 text-base md:text-lg bg-home-bg hover:bg-home-bg hover:text-white transition-colors duration-200"
+            className=" text-home-text rounded-full h-10 p-6 text-base md:text-lg bg-home-bg hover:bg-home-bg hover:text-white transition-colors duration-200"
           >
             Get Think Space Free
           </Button>
@@ -34,10 +34,10 @@ export const Auth = () => {
   }
 
   return (
-    <div className="w-fit bg-foreground p-[2px] mt-4 rounded-full bg-gradient-to-r from-primary to-washed-blue-200 z-20">
+    <div className="w-fit bg-foreground p-[2px] mt-4 rounded-full bg-gradient-to-r from-primary to-washed-blue-200 z-20 ">
       <Button
         variant="secondary"
-        className=" text-home-text rounded-full p-6 text-base md:text-lg bg-home-bg hover:bg-home-bg hover:text-white transition-colors duration-200"
+        className=" text-home-text rounded-full h-10 p-6 text-base md:text-lg bg-home-bg hover:bg-home-bg hover:text-white transition-colors duration-200"
       >
         <Link href="/documents">Enter Think Space</Link>
       </Button>
