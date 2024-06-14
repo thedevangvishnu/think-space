@@ -1,5 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
-.bn-container[data-changing-font-demo] .bn-editor * {
+.bn-container[data-font] .bn-editor * {
   font-family: "Inter", sans-serif;
+}
+
+.bn-container[data-theme-dark][data-color-scheme="dark"] {
+  --bn-colors-editor-text: #c5c1ff;
+  --bn-colors-editor-background: #02000f;
+  --bn-colors-menu-text: #d3ccff;
+  --bn-colors-menu-background: #120f24;
+  --bn-colors-tooltip-text: #d3ccff;
+  --bn-colors-tooltip-background: #4c4b6b;
+  --bn-colors-hovered-text: #d3ccff;
+  --bn-colors-hovered-background: hsla(248, 31%, 31%, 0.4);
+  --bn-colors-selected-text: #d3ccff;
+  --bn-colors-selected-background: #3c3663;
+  --bn-colors-disabled-text: #d3ccff;
+  --bn-colors-disabled-background: #070609;
+  --bn-colors-shadow: #070609;
+  --bn-colors-border: #070609;
+  --bn-colors-side-menu: #bababa;
+  --bn-color-highlight-colors: #d3ccff;
 }

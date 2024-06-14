@@ -105,8 +105,8 @@ export const Item = ({
       role="button"
       style={{ paddingLeft: level ? `${level * 12 + 12}px` : "12px" }}
       className={cn(
-        "group min-h-[27px] text-sm pr-3 py-1.5 w-full hover:bg-primary/5 flex items-center text-muted-foreground font-medium",
-        active && "bg-primary/5 text-primary"
+        "group min-h-[27px] text-sm pr-3 py-1.5 w-full hover:bg-foreground/5 dark:hover:bg-accent/40 flex items-center text-muted-foreground dark:text-washed-purple-800 font-medium",
+        active && "text-foreground dark:text-foreground"
       )}
     >
       <div className="w-8">
@@ -123,7 +123,7 @@ export const Item = ({
             <div
               onClick={handleExpand}
               role="button"
-              className="hidden h-full w-5 rounded-sm hover:bg-neutral-300 dark:hover:bg-neutral-600 transition-colors duration-150 mr-1 group-hover:flex"
+              className="hidden h-full w-5 rounded-sm hover:bg-neutral-300 dark:hover:bg-washed-purple-900 transition-colors duration-150 mr-1 group-hover:flex"
             >
               <ChevronIcon className="h-5 w-5 shrink-0 text-muted-foreground/50" />
             </div>
@@ -141,7 +141,8 @@ export const Item = ({
               <div
                 onClick={handleExpand}
                 role="button"
-                className="hidden h-full w-5 rounded-sm hover:bg-neutral-300 dark:hover:bg-neutral-600 transition-colors duration-150 mr-1 group-hover:flex"
+                className="hidden h-full w-5 rounded-sm hover:bg-neutral-300 dark:hover:bg-washed-purple-900
+                  transition-colors duration-150 mr-1 group-hover:flex"
               >
                 <ChevronIcon className="h-5 w-5 shrink-0 text-muted-foreground/50" />
               </div>
@@ -164,7 +165,7 @@ export const Item = ({
             <DropdownMenuTrigger asChild onClick={(e) => e.stopPropagation()}>
               <div
                 role="button"
-                className="opacity-0 group-hover:opacity-100 h-full ml-auto rounded-sm hover:bg-neutral-300 dark:hover:bg-neutral-600"
+                className="opacity-0 group-hover:opacity-100 h-full ml-auto rounded-sm hover:bg-neutral-300 dark:hover:bg-washed-purple-900 p-[2px]"
               >
                 <MoreHorizontal className="h-4 w-4 text-muted-foreground" />
               </div>
@@ -188,7 +189,7 @@ export const Item = ({
           <div
             role="button"
             onClick={onCreate}
-            className="opacity-0 group-hover:opacity-100 h-full ml-auto rounded-sm hover:bg-neutral-300 dark:hover:bg-neutral-600"
+            className="opacity-0 group-hover:opacity-100 h-full ml-auto rounded-sm hover:bg-neutral-300 dark:hover:bg-washed-purple-900 p-[2px]"
           >
             <Plus className="h-4 w-4 text-muted-foreground" />
           </div>

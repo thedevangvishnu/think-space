@@ -10,22 +10,20 @@ const poppins = Poppins({
 
 export const Logo = () => {
   return (
-    <div className="hidden w-[250px] md:flex flex-row items-center gap-x-2">
-      <Image
-        src="/logo/logo.svg"
-        alt="Logo"
-        width="40"
-        height="40"
-        className="dark:hidden"
-      />
+    <div className="w-[250px] flex flex-row items-center gap-x-2">
       <Image
         src="/logo/logo-dark.svg"
         alt="Logo"
-        width="40"
-        height="40"
-        className="hidden dark:flex"
+        width="25"
+        height="25"
+        className=""
       />
-      <p className={cn("font-semibold text-xl", poppins.className)}>
+      <p
+        className={cn(
+          "font-semibold text-lg hidden md:block",
+          poppins.className
+        )}
+      >
         Think Space
       </p>
     </div>

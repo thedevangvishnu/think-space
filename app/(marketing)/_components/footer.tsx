@@ -4,16 +4,26 @@ import { Button } from "@/components/ui/button";
 
 export const Footer = () => {
   return (
-    <div className="flex items-center w-full p-2 md:p-6 bg-background z-50">
-      <Logo />
-      <div className="md:ml-auto w-full justify-between md:justify-end flex items-center gap-x-2 text-muted-foreground">
-        <Button variant="ghost" size="sm">
-          Privacy Policy
-        </Button>
-        <Button variant="ghost" size="sm">
-          Terms & Condition
-        </Button>
+    <footer className="w-full px-6 py-2 md:p-6 bg-background z-50">
+      <div className="flex w-full items-center max-w-[1300px] mx-auto">
+        <Logo />
+        <div className="md:ml-auto w-full justify-between md:justify-end flex items-center gap-x-2 text-muted-foreground">
+          <Button
+            variant="ghost"
+            size="sm"
+            className="rounded-full hover:bg-transparent text-washed-purple-500"
+          >
+            Privacy Policy
+          </Button>
+          <Button
+            variant="ghost"
+            size="sm"
+            className="rounded-full hover:bg-transparent text-washed-purple-500"
+          >
+            Terms & Condition
+          </Button>
+        </div>
       </div>
-    </div>
+    </footer>
   );
 };
