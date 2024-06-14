@@ -92,9 +92,9 @@ export default function Home() {
             <div
               key={randomUUID()}
               className={cn(
-                "mt-10 flex flex-nowrap animate-[slide_5s_linear_infinite hover:paused hover:cursor-pointer w-full gap-x-8",
+                "mt-10 flex flex-nowrap animate-[slide_8s_linear_infinite] hover:paused hover:cursor-pointer gap-x-8 w-full",
                 index === 1 &&
-                  "flex-row-reverse animate-[slide_5s_linear_infinite_reverse"
+                  "ml-[100vw] w-full flex-row-reverse animate-[slide_8s_linear_infinite_reverse]"
               )}
             >
               {[...Array(2)].map((arr) => (
@@ -107,12 +107,6 @@ export default function Home() {
                       message={user.message}
                       src={`/images/avatars/${index + 1}.png`}
                     />
-                    // <div
-                    //   key={user.name}
-                    //   className="w-[340px] shrink-0 h-32 bg-gradient-to-b from-brand-primaryPurple to-washed-blue-800 rounded-xl flex items-center justify-center"
-                    // >
-                    //   <p>{user.name}</p>
-                    // </div>
                   ))}
                 </div>
               ))}
